@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Final Project - Yize Shen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Final Project - Yize Shen">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Final Project - Yize Shen">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Yize Shen">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Final Project - Yize Shen" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Final Project - Yize Shen</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/05/14/hello-world/" class="article-date">
+  <time class="dt-published" datetime="2022-05-15T01:34:46.692Z" itemprop="datePublished">2022-05-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/05/14/hello-world/">Humanoid Final Project - Black and White Image Colorization</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Member"><a href="#Member" class="headerlink" title="Member"></a>Member</h2><p>Yize Shen, Information Systems at 2024</p>
+<h2 id="Motivations"><a href="#Motivations" class="headerlink" title="Motivations"></a>Motivations</h2><p>Have you ever scrolled through reddit posts, and encounter some that’s the in the subreddit <a target="_blank" rel="noopener" href="https://www.reddit.com/r/Colorization/">Colorization Sub Reddit</a> that made themselves to the top post of the week?</p>
+<p>I was browsing through the sub reddit and found this thread talking about using AI to colorize images, thus wish to give it a try.</p>
+<h2 id="Overall-Methods-and-Plans"><a href="#Overall-Methods-and-Plans" class="headerlink" title="Overall Methods and Plans"></a>Overall Methods and Plans</h2><p>The process of colorizing the image was split into three parts, given a black and white images</p>
+<ul>
+<li>Converting RGB values to Lab values through openCV,</li>
+<li>Training the ab channel through Caffe, combining with the L channel using caffe</li>
+<li>Confirming prediction with deoldify, converting it back to RGB.</li>
+</ul>
+<h2 id="Extracting-images"><a href="#Extracting-images" class="headerlink" title="Extracting images"></a>Extracting images</h2><p>We used openCV to extract the image, at the same time, call the caffee module for later usage</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">frame = cv.imread(“project/images/black-white-test-1.png”)</span><br><span class="line">numpy_file = np.load(&#x27;./pts_in_hull.npy&#x27;)</span><br><span class="line">Caffe_net = cv.dnn.readNetFromCaffe(&quot;./models/colorization_deploy_v2.prototxt&quot;, &quot;./models/colorization_release_v2.caffemodel&quot;)</span><br><span class="line"></span><br><span class="line"># load black and white images</span><br><span class="line"></span><br><span class="line">numpy_file = numpy_file.transpose().reshape(2, 313, 1, 1)</span><br><span class="line">Caffe_net.getLayer(Caffe_net.getLayerId()).blobs = [numpy_file.astype(np.float32)]</span><br><span class="line">Caffe_net.getLayer(Caffe_net.getLayerId(&#x27;conv8_313_rh&#x27;)).blobs = [np.full([1, 313], 2.606, np.float32)]</span><br></pre></td></tr></table></figure>
+
+<h2 id="Predicting-Channels"><a href="#Predicting-Channels" class="headerlink" title="Predicting Channels"></a>Predicting Channels</h2><p>After we have gotten the image through openCV, we are able to extract the L channel, which is the greyscale of the black and white image itself. After that, we would be able to predict the ab channel given the L channel that we extracted.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># extracting L channel, resize the image</span><br><span class="line"></span><br><span class="line">input_width = 224</span><br><span class="line">input_height = 224</span><br><span class="line">rgb_img = (frame[:,:,[2, 1, 0]] \* 1.0 / 255).astype()</span><br><span class="line">lab_img = cv.cvtColor(rgb_img, cv.COLOR_RGB2Lab)</span><br><span class="line">l_channel = lab_img[:,:,0]</span><br><span class="line">l_channel_resize = cv.resize(l_channel, (input_width, input_height))</span><br><span class="line"></span><br><span class="line"># Predicting ab channel using caffe pretrained model</span><br><span class="line"></span><br><span class="line">Caffe_net.setInput(cv.dnn.blobFromImage(l_channel_resize))</span><br><span class="line">ab_channel = Caffe_net.forward()[0,:,:,:].transpose((1,2,0))</span><br><span class="line">(original_height,original_width) = rgb_img.shape[:2]</span><br><span class="line">ab_channel_us = cv.resize(ab_channel, (original_width, original_height))</span><br></pre></td></tr></table></figure>
+
+<h2 id="Comparing-with-DeOldify-Image-Colorizer"><a href="#Comparing-with-DeOldify-Image-Colorizer" class="headerlink" title="Comparing with DeOldify Image Colorizer"></a>Comparing with DeOldify Image Colorizer</h2><p>Lastly, we will try to input the result through DeOldify, checking for percentage similarity</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># Render the same image through DeOldify</span><br><span class="line"></span><br><span class="line">render_factor=35</span><br><span class="line">source_url= None</span><br><span class="line">source_path = &#x27;project/images/black-white-test-1.png&#x27;</span><br><span class="line">result_path = None</span><br><span class="line"></span><br><span class="line">if source_url is not None:</span><br><span class="line">result_path = colorizer.plot_transformed_image_from_url(url=source_url, path=source_path, render_factor=render_factor, compare=True)</span><br><span class="line">else:</span><br><span class="line">result_path = colorizer.plot_transformed_image(path=source_path, render_factor=render_factor, compare=True)</span><br><span class="line"></span><br><span class="line"># Output the similarity of the two images rendered</span><br><span class="line"></span><br><span class="line">cv.imwrite(&quot;./result2.png&quot;, (bgr_output\*255).astype(np.uint8))</span><br><span class="line">similarity = cv.norm(&quot;project/images/result/result2&quot;, &quot;project/images/result/result1&quot;, CV_L2)</span><br><span class="line">return similarity</span><br></pre></td></tr></table></figure>
+
+<h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><p>Some results will be show below</p>
+<img src="../images/fence-bw.jpeg" alt="" style="">
+<img src="../images/fence-resaturated.jpeg" alt="" style="">
+<img src="../images/professor-bw.jpg" alt="" style="width: 30%; height: 30%">
+<img src="../images/professor-resaturated.jpg" alt="" style="width: 30%; height: 30%">
+<img src="../images/mrinal-bw.jpeg" alt="" style="">
+<img src="../images/mrinal-saturaed.jpeg" alt="" style="">
+
+<h2 id="Acknowledgement-and-Limitations"><a href="#Acknowledgement-and-Limitations" class="headerlink" title="Acknowledgement and Limitations"></a>Acknowledgement and Limitations</h2><p>Currently the project (specifically the first program that uses the cafee module) is relatively ineffcient, as it takes around half a minute to up to two minutes on relatively small images, especially ones with higher contrasts.</p>
+<p>Further, the program performs better with landscapes compare to human portraits, one potential reasoning would be that the training module didn’t get to see the diversity of human colors, as seen in set 2 and 3, the picture of professor Atkeson was being rendered with more accuracy compare to Mrinal.</p>
+<p>Source referenced can be found in the slides <a target="_blank" rel="noopener" href="https://docs.google.com/presentation/d/10MAZBHEWHy7zCkcBHXejHmr6z0C34r8oTS8syS62AEw/edit?usp=sharing">here</a>.</p>
+<h2 id="Presentation"><a href="#Presentation" class="headerlink" title="Presentation"></a>Presentation</h2><p>Presentaton can be found <a target="_blank" rel="noopener" href="https://docs.google.com/presentation/d/10MAZBHEWHy7zCkcBHXejHmr6z0C34r8oTS8syS62AEw/edit?usp=sharing">here</a></p>
+<h2 id="Thanks-for-reading"><a href="#Thanks-for-reading" class="headerlink" title="Thanks for reading!"></a>Thanks for reading!</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/05/14/hello-world/" data-id="cl36o0www0000batb1ci05dop" data-title="Humanoid Final Project - Black and White Image Colorization" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/05/14/hello-world/">Humanoid Final Project - Black and White Image Colorization</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 Yize Shen<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
