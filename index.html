@@ -185,7 +185,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-05-14 18:34:46 / Modified: 19:10:51" itemprop="dateCreated datePublished" datetime="2022-05-14T18:34:46-07:00">2022-05-14</time>
+      <time title="Created: 2022-05-14 18:34:46 / Modified: 19:30:06" itemprop="dateCreated datePublished" datetime="2022-05-14T18:34:46-07:00">2022-05-14</time>
     </span>
 
   
@@ -217,12 +217,12 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># Render the same image through DeOldify</span><br><span class="line"></span><br><span class="line">render_factor=35</span><br><span class="line">source_url= None</span><br><span class="line">source_path = &#x27;project/images/black-white-test-1.png&#x27;</span><br><span class="line">result_path = None</span><br><span class="line"></span><br><span class="line">if source_url is not None:</span><br><span class="line">result_path = colorizer.plot_transformed_image_from_url(url=source_url, path=source_path, render_factor=render_factor, compare=True)</span><br><span class="line">else:</span><br><span class="line">result_path = colorizer.plot_transformed_image(path=source_path, render_factor=render_factor, compare=True)</span><br><span class="line"></span><br><span class="line"># Output the similarity of the two images rendered</span><br><span class="line"></span><br><span class="line">cv.imwrite(&quot;./result2.png&quot;, (bgr_output\*255).astype(np.uint8))</span><br><span class="line">similarity = cv.norm(&quot;project/images/result/result2&quot;, &quot;project/images/result/result1&quot;, CV_L2)</span><br><span class="line">return similarity</span><br></pre></td></tr></table></figure>
 
 <h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><p>Some results will be show below</p>
-<img src="../images/fence-bw.jpeg" alt="" style="">
-<img src="../images/fence-resaturated.jpeg" alt="" style="">
-<img src="../images/professor-bw.jpg" alt="" style="width: 30%; height: 30%">
-<img src="../images/professor-resaturated.jpg" alt="" style="width: 30%; height: 30%">
-<img src="../images/mrinal-bw.jpeg" alt="" style="">
-<img src="../images/mrinal-saturaed.jpeg" alt="" style="">
+<img src="images/fence-bw.jpeg" alt="" style="">
+<img src="images/fence-resaturated.jpeg" alt="" style="">
+<img src="images/professor-bw.jpg" alt="" style="width: 30%; height: 30%">
+<img src="images/professor-resaturated.jpg" alt="" style="width: 30%; height: 30%">
+<img src="images/mrinal-bw.jpeg" alt="" style="">
+<img src="images/mrinal-saturaed.jpeg" alt="" style="">
 
 <h2 id="Acknowledgement-and-Limitations"><a href="#Acknowledgement-and-Limitations" class="headerlink" title="Acknowledgement and Limitations"></a>Acknowledgement and Limitations</h2><p>Currently the project (specifically the first program that uses the cafee module) is relatively ineffcient, as it takes around half a minute to up to two minutes on relatively small images, especially ones with higher contrasts.</p>
 <p>Further, the program performs better with landscapes compare to human portraits, one potential reasoning would be that the training module didn’t get to see the diversity of human colors, as seen in set 2 and 3, the picture of professor Atkeson was being rendered with more accuracy compare to Mrinal.</p>
