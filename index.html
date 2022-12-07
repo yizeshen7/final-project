@@ -1,289 +1,557 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#222" />
+    <meta name="generator" content="Hexo 6.2.0" />
 
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/humanoid-final-project/images/apple-touch-icon-next.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/humanoid-final-project/images/favicon-32x32-next.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/humanoid-final-project/images/favicon-16x16-next.png"
+    />
+    <link
+      rel="mask-icon"
+      href="/humanoid-final-project/images/logo.svg"
+      color="#222"
+    />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/humanoid-final-project/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/humanoid-final-project/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/humanoid-final-project/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/humanoid-final-project/images/logo.svg" color="#222">
+    <link rel="stylesheet" href="/humanoid-final-project/css/main.css" />
 
-<link rel="stylesheet" href="/humanoid-final-project/css/main.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"
+      integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css"
+      integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE="
+      crossorigin="anonymous"
+    />
 
+    <script class="next-config" data-name="main" type="application/json">
+      {
+        "hostname": "yizeshen7.github.io",
+        "root": "/humanoid-final-project/",
+        "images": "/humanoid-final-project/images",
+        "scheme": "Muse",
+        "darkmode": false,
+        "version": "8.11.1",
+        "exturl": false,
+        "sidebar": {
+          "position": "left",
+          "display": "post",
+          "padding": 18,
+          "offset": 12
+        },
+        "copycode": false,
+        "bookmark": { "enable": false, "color": "#222", "save": "auto" },
+        "mediumzoom": false,
+        "lazyload": false,
+        "pangu": false,
+        "comments": {
+          "style": "tabs",
+          "active": null,
+          "storage": true,
+          "lazyload": false,
+          "nav": null
+        },
+        "stickytabs": false,
+        "motion": {
+          "enable": true,
+          "async": false,
+          "transition": {
+            "post_block": "fadeIn",
+            "post_header": "fadeInDown",
+            "post_body": "fadeInDown",
+            "coll_header": "fadeInLeft",
+            "sidebar": "fadeInUp"
+          }
+        },
+        "prism": false,
+        "i18n": {
+          "placeholder": "Searching...",
+          "empty": "We didn't find any results for the search: ${query}",
+          "hits_time": "${hits} results found in ${time} ms",
+          "hits": "${hits} results found"
+        }
+      }
+    </script>
+    <script src="/humanoid-final-project/js/config.js"></script>
 
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Final Project - Yize Shen" />
+    <meta
+      property="og:url"
+      content="https://yizeshen7.github.io/humanoid-final-project/index.html"
+    />
+    <meta property="og:site_name" content="Final Project - Yize Shen" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="article:author" content="Sean Shen" />
+    <meta name="twitter:card" content="summary" />
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+    <link
+      rel="canonical"
+      href="https://yizeshen7.github.io/humanoid-final-project/"
+    />
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"yizeshen7.github.io","root":"/humanoid-final-project/","images":"/humanoid-final-project/images","scheme":"Muse","darkmode":false,"version":"8.11.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/humanoid-final-project/js/config.js"></script>
+    <script class="next-config" data-name="page" type="application/json">
+      {
+        "sidebar": "",
+        "isHome": true,
+        "isPost": false,
+        "lang": "en",
+        "comments": "",
+        "permalink": "",
+        "path": "index.html",
+        "title": ""
+      }
+    </script>
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Final Project - Yize Shen">
-<meta property="og:url" content="https://yizeshen7.github.io/humanoid-final-project/index.html">
-<meta property="og:site_name" content="Final Project - Yize Shen">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="Yize Shen">
-<meta name="twitter:card" content="summary">
+    <script class="next-config" data-name="calendar" type="application/json">
+      ""
+    </script>
+    <title>Final Project - Yize Shen</title>
 
+    <noscript>
+      <link rel="stylesheet" href="/humanoid-final-project/css/noscript.css" />
+    </noscript>
+  </head>
 
-<link rel="canonical" href="https://yizeshen7.github.io/humanoid-final-project/">
+  <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+    <div class="headband"></div>
 
+    <main class="main">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner">
+          <div class="site-brand-container">
+            <div class="site-nav-toggle">
+              <div
+                class="toggle"
+                aria-label="Toggle navigation bar"
+                role="button"
+              ></div>
+            </div>
 
+            <div class="site-meta">
+              <a href="/humanoid-final-project/" class="brand" rel="start">
+                <i class="logo-line"></i>
+                <h1 class="site-title">Final Project - Yize Shen</h1>
+                <i class="logo-line"></i>
+              </a>
+            </div>
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"index.html","title":""}</script>
-
-<script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Final Project - Yize Shen</title>
-  
-
-
-
-
-
-  <noscript>
-    <link rel="stylesheet" href="/humanoid-final-project/css/noscript.css">
-  </noscript>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
-
-  <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar" role="button">
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/humanoid-final-project/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <h1 class="site-title">Final Project - Yize Shen</h1>
-      <i class="logo-line"></i>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-</div>
-        
-  
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
-  <aside class="sidebar">
-
-    <div class="sidebar-inner sidebar-overview-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
+            <div class="site-nav-right">
+              <div class="toggle popup-trigger"></div>
+            </div>
+          </div>
         </div>
-        <!--/noindex-->
 
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">Yize Shen</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap site-overview-item animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-        <a href="/humanoid-final-project/archives/">
-          <span class="site-state-item-count">1</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-  </nav>
-</div>
-
-
-
+        <div class="toggle sidebar-toggle" role="button">
+          <span class="toggle-line"></span>
+          <span class="toggle-line"></span>
+          <span class="toggle-line"></span>
         </div>
-      </div>
-    </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
 
+        <aside class="sidebar">
+          <div class="sidebar-inner sidebar-overview-active">
+            <ul class="sidebar-nav">
+              <li class="sidebar-nav-toc">Table of Contents</li>
+              <li class="sidebar-nav-overview">Overview</li>
+            </ul>
 
-    </header>
+            <div class="sidebar-panel-container">
+              <!--noindex-->
+              <div class="post-toc-wrap sidebar-panel"></div>
+              <!--/noindex-->
 
-    
-  <div class="back-to-top" role="button" aria-label="Back to top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
-
-
-    <div class="main-inner index posts-expand">
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yizeshen7.github.io/humanoid-final-project/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/humanoid-final-project/images/avatar.gif">
-      <meta itemprop="name" content="Yize Shen">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Final Project - Yize Shen">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Final Project - Yize Shen">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/humanoid-final-project/hello-world/" class="post-title-link" itemprop="url">Humanoid Final Project - Black and White Image Colorization</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-05-14 18:34:46 / Modified: 19:32:35" itemprop="dateCreated datePublished" datetime="2022-05-14T18:34:46-07:00">2022-05-14</time>
-    </span>
-
-  
-</div>
-
-        </div>
+              <div class="site-overview-wrap sidebar-panel">
+                <div
+                  class="site-author site-overview-item animated"
+                  itemprop="author"
+                  itemscope
+                  itemtype="http://schema.org/Person"
+                >
+                  <p class="site-author-name" itemprop="name">Yize Shen</p>
+                  <div class="site-description" itemprop="description"></div>
+                </div>
+                <div class="site-state-wrap site-overview-item animated">
+                  <nav class="site-state">
+                    <div class="site-state-item site-state-posts">
+                      <a href="/humanoid-final-project/archives/">
+                        <span class="site-state-item-count">1</span>
+                        <span class="site-state-item-name">posts</span>
+                      </a>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <div class="sidebar-dimmer"></div>
       </header>
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Member"><a href="#Member" class="headerlink" title="Member"></a>Member</h2><p>Yize Shen, Information Systems at 2024</p>
-<h2 id="Motivations"><a href="#Motivations" class="headerlink" title="Motivations"></a>Motivations</h2><p>Have you ever scrolled through reddit posts, and encounter some that’s the in the subreddit <a target="_blank" rel="noopener" href="https://www.reddit.com/r/Colorization/">Colorization Sub Reddit</a> that made themselves to the top post of the week?</p>
-<p>I was browsing through the sub reddit and found this thread talking about using AI to colorize images, thus wish to give it a try.</p>
-<h2 id="Overall-Methods-and-Plans"><a href="#Overall-Methods-and-Plans" class="headerlink" title="Overall Methods and Plans"></a>Overall Methods and Plans</h2><p>The process of colorizing the image was split into three parts, given a black and white images</p>
-<ul>
-<li>Converting RGB values to Lab values through openCV,</li>
-<li>Training the ab channel through Caffe, combining with the L channel using caffe</li>
-<li>Confirming prediction with deoldify, converting it back to RGB.</li>
-</ul>
-<h2 id="Extracting-images"><a href="#Extracting-images" class="headerlink" title="Extracting images"></a>Extracting images</h2><p>We used openCV to extract the image, at the same time, call the caffee module for later usage</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">frame = cv.imread(“project/images/black-white-test-1.png”)</span><br><span class="line">numpy_file = np.load(&#x27;./pts_in_hull.npy&#x27;)</span><br><span class="line">Caffe_net = cv.dnn.readNetFromCaffe(&quot;./models/colorization_deploy_v2.prototxt&quot;, &quot;./models/colorization_release_v2.caffemodel&quot;)</span><br><span class="line"></span><br><span class="line"># load black and white images</span><br><span class="line"></span><br><span class="line">numpy_file = numpy_file.transpose().reshape(2, 313, 1, 1)</span><br><span class="line">Caffe_net.getLayer(Caffe_net.getLayerId()).blobs = [numpy_file.astype(np.float32)]</span><br><span class="line">Caffe_net.getLayer(Caffe_net.getLayerId(&#x27;conv8_313_rh&#x27;)).blobs = [np.full([1, 313], 2.606, np.float32)]</span><br></pre></td></tr></table></figure>
+      <div class="back-to-top" role="button" aria-label="Back to top">
+        <i class="fa fa-arrow-up"></i>
+        <span>0%</span>
+      </div>
 
-<h2 id="Predicting-Channels"><a href="#Predicting-Channels" class="headerlink" title="Predicting Channels"></a>Predicting Channels</h2><p>After we have gotten the image through openCV, we are able to extract the L channel, which is the greyscale of the black and white image itself. After that, we would be able to predict the ab channel given the L channel that we extracted.</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># extracting L channel, resize the image</span><br><span class="line"></span><br><span class="line">input_width = 224</span><br><span class="line">input_height = 224</span><br><span class="line">rgb_img = (frame[:,:,[2, 1, 0]] \* 1.0 / 255).astype()</span><br><span class="line">lab_img = cv.cvtColor(rgb_img, cv.COLOR_RGB2Lab)</span><br><span class="line">l_channel = lab_img[:,:,0]</span><br><span class="line">l_channel_resize = cv.resize(l_channel, (input_width, input_height))</span><br><span class="line"></span><br><span class="line"># Predicting ab channel using caffe pretrained model</span><br><span class="line"></span><br><span class="line">Caffe_net.setInput(cv.dnn.blobFromImage(l_channel_resize))</span><br><span class="line">ab_channel = Caffe_net.forward()[0,:,:,:].transpose((1,2,0))</span><br><span class="line">(original_height,original_width) = rgb_img.shape[:2]</span><br><span class="line">ab_channel_us = cv.resize(ab_channel, (original_width, original_height))</span><br></pre></td></tr></table></figure>
+      <noscript>
+        <div class="noscript-warning">
+          Theme NexT works best with JavaScript enabled
+        </div>
+      </noscript>
 
-<h2 id="Comparing-with-DeOldify-Image-Colorizer"><a href="#Comparing-with-DeOldify-Image-Colorizer" class="headerlink" title="Comparing with DeOldify Image Colorizer"></a>Comparing with DeOldify Image Colorizer</h2><p>Lastly, we will try to input the result through DeOldify, checking for percentage similarity</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># Render the same image through DeOldify</span><br><span class="line"></span><br><span class="line">render_factor=35</span><br><span class="line">source_url= None</span><br><span class="line">source_path = &#x27;project/images/black-white-test-1.png&#x27;</span><br><span class="line">result_path = None</span><br><span class="line"></span><br><span class="line">if source_url is not None:</span><br><span class="line">result_path = colorizer.plot_transformed_image_from_url(url=source_url, path=source_path, render_factor=render_factor, compare=True)</span><br><span class="line">else:</span><br><span class="line">result_path = colorizer.plot_transformed_image(path=source_path, render_factor=render_factor, compare=True)</span><br><span class="line"></span><br><span class="line"># Output the similarity of the two images rendered</span><br><span class="line"></span><br><span class="line">cv.imwrite(&quot;./result2.png&quot;, (bgr_output\*255).astype(np.uint8))</span><br><span class="line">similarity = cv.norm(&quot;project/images/result/result2&quot;, &quot;project/images/result/result1&quot;, CV_L2)</span><br><span class="line">return similarity</span><br></pre></td></tr></table></figure>
+      <div class="main-inner index posts-expand">
+        <div class="post-block">
+          <article
+            itemscope
+            itemtype="http://schema.org/Article"
+            class="post-content"
+            lang=""
+          >
+            <link
+              itemprop="mainEntityOfPage"
+              href="https://yizeshen7.github.io/humanoid-final-project/hello-world/"
+            />
 
-<h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><p>Some results will be show below</p>
-<p>Note that if the images doesn’t load, you can find it under slides <a target="_blank" rel="noopener" href="https://docs.google.com/presentation/d/10MAZBHEWHy7zCkcBHXejHmr6z0C34r8oTS8syS62AEw/edit?usp=sharing">here</a>.</p>
-<img src="../images/fence-bw.jpeg" alt="" style="">
-<img src="../images/fence-resaturated.jpeg" alt="" style="">
-<img src="../images/professor-bw.jpg" alt="" style="width: 30%; height: 30%">
-<img src="../images/professor-resaturated.jpg" alt="" style="width: 30%; height: 30%">
-<img src="../images/mrinal-bw.jpeg" alt="" style="">
-<img src="../images/mrinal-saturaed.jpeg" alt="" style="">
+            <span
+              hidden
+              itemprop="author"
+              itemscope
+              itemtype="http://schema.org/Person"
+            >
+              <meta
+                itemprop="image"
+                content="/humanoid-final-project/images/avatar.gif"
+              />
+              <meta itemprop="name" content="Yize Shen" />
+            </span>
 
-<h2 id="Acknowledgement-and-Limitations"><a href="#Acknowledgement-and-Limitations" class="headerlink" title="Acknowledgement and Limitations"></a>Acknowledgement and Limitations</h2><p>Currently the project (specifically the first program that uses the cafee module) is relatively ineffcient, as it takes around half a minute to up to two minutes on relatively small images, especially ones with higher contrasts.</p>
-<p>Further, the program performs better with landscapes compare to human portraits, one potential reasoning would be that the training module didn’t get to see the diversity of human colors, as seen in set 2 and 3, the picture of professor Atkeson was being rendered with more accuracy compare to Mrinal.</p>
-<p>Source referenced can be found in the slides <a target="_blank" rel="noopener" href="https://docs.google.com/presentation/d/10MAZBHEWHy7zCkcBHXejHmr6z0C34r8oTS8syS62AEw/edit?usp=sharing">here</a>.</p>
-<h2 id="Presentation"><a href="#Presentation" class="headerlink" title="Presentation"></a>Presentation</h2><p>Presentaton can be found <a target="_blank" rel="noopener" href="https://docs.google.com/presentation/d/10MAZBHEWHy7zCkcBHXejHmr6z0C34r8oTS8syS62AEw/edit?usp=sharing">here</a></p>
-<h2 id="Thanks-for-reading"><a href="#Thanks-for-reading" class="headerlink" title="Thanks for reading!"></a>Thanks for reading!</h2>
-      
-    </div>
+            <span
+              hidden
+              itemprop="publisher"
+              itemscope
+              itemtype="http://schema.org/Organization"
+            >
+              <meta itemprop="name" content="Final Project - Yize Shen" />
+              <meta itemprop="description" content="" />
+            </span>
 
-    
-    
-    
+            <span
+              hidden
+              itemprop="post"
+              itemscope
+              itemtype="http://schema.org/CreativeWork"
+            >
+              <meta
+                itemprop="name"
+                content="undefined | Final Project - Yize Shen"
+              />
+              <meta itemprop="description" content="" />
+            </span>
+            <header class="post-header">
+              <h2 class="post-title" itemprop="name headline">
+                <a
+                  href="/humanoid-final-project/hello-world/"
+                  class="post-title-link"
+                  itemprop="url"
+                  >Humanoid Final Project - Black and White Image
+                  Colorization</a
+                >
+              </h2>
 
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+              <div class="post-meta-container">
+                <div class="post-meta">
+                  <span class="post-meta-item">
+                    <span class="post-meta-item-icon">
+                      <i class="far fa-calendar"></i>
+                    </span>
+                    <span class="post-meta-item-text">Posted on</span>
+
+                    <time
+                      title="Created: 2022-05-14 18:34:46 / Modified: 19:32:35"
+                      itemprop="dateCreated datePublished"
+                      datetime="2022-05-14T18:34:46-07:00"
+                      >2022-05-14</time
+                    >
+                  </span>
+                </div>
+              </div>
+            </header>
+
+            <div class="post-body" itemprop="articleBody">
+              <h2 id="Member">
+                <a href="#Member" class="headerlink" title="Member"></a>Member
+              </h2>
+              <p>Yize Shen, Information Systems at 2024</p>
+              <h2 id="Motivations">
+                <a
+                  href="#Motivations"
+                  class="headerlink"
+                  title="Motivations"
+                ></a
+                >Motivations
+              </h2>
+              <p>
+                Have you ever scrolled through reddit posts, and encounter some
+                that’s the in the subreddit
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.reddit.com/r/Colorization/"
+                  >Colorization Sub Reddit</a
+                >
+                that made themselves to the top post of the week?
+              </p>
+              <p>
+                I was browsing through the sub reddit and found this thread
+                talking about using AI to colorize images, thus wish to give it
+                a try.
+              </p>
+              <h2 id="Overall-Methods-and-Plans">
+                <a
+                  href="#Overall-Methods-and-Plans"
+                  class="headerlink"
+                  title="Overall Methods and Plans"
+                ></a
+                >Overall Methods and Plans
+              </h2>
+              <p>
+                The process of colorizing the image was split into three parts,
+                given a black and white images
+              </p>
+              <ul>
+                <li>Converting RGB values to Lab values through openCV,</li>
+                <li>
+                  Training the ab channel through Caffe, combining with the L
+                  channel using caffe
+                </li>
+                <li>
+                  Confirming prediction with deoldify, converting it back to
+                  RGB.
+                </li>
+              </ul>
+              <h2 id="Extracting-images">
+                <a
+                  href="#Extracting-images"
+                  class="headerlink"
+                  title="Extracting images"
+                ></a
+                >Extracting images
+              </h2>
+              <p>
+                We used openCV to extract the image, at the same time, call the
+                caffee module for later usage
+              </p>
+              <figure class="highlight plaintext">
+                <table>
+                  <tr>
+                    <td class="gutter">
+                      <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre>
+                    </td>
+                    <td class="code">
+                      <pre><span class="line">frame = cv.imread(“project/images/black-white-test-1.png”)</span><br><span class="line">numpy_file = np.load(&#x27;./pts_in_hull.npy&#x27;)</span><br><span class="line">Caffe_net = cv.dnn.readNetFromCaffe(&quot;./models/colorization_deploy_v2.prototxt&quot;, &quot;./models/colorization_release_v2.caffemodel&quot;)</span><br><span class="line"></span><br><span class="line"># load black and white images</span><br><span class="line"></span><br><span class="line">numpy_file = numpy_file.transpose().reshape(2, 313, 1, 1)</span><br><span class="line">Caffe_net.getLayer(Caffe_net.getLayerId()).blobs = [numpy_file.astype(np.float32)]</span><br><span class="line">Caffe_net.getLayer(Caffe_net.getLayerId(&#x27;conv8_313_rh&#x27;)).blobs = [np.full([1, 313], 2.606, np.float32)]</span><br></pre>
+                    </td>
+                  </tr>
+                </table>
+              </figure>
+
+              <h2 id="Predicting-Channels">
+                <a
+                  href="#Predicting-Channels"
+                  class="headerlink"
+                  title="Predicting Channels"
+                ></a
+                >Predicting Channels
+              </h2>
+              <p>
+                After we have gotten the image through openCV, we are able to
+                extract the L channel, which is the greyscale of the black and
+                white image itself. After that, we would be able to predict the
+                ab channel given the L channel that we extracted.
+              </p>
+              <figure class="highlight plaintext">
+                <table>
+                  <tr>
+                    <td class="gutter">
+                      <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre>
+                    </td>
+                    <td class="code">
+                      <pre><span class="line"></span><br><span class="line"># extracting L channel, resize the image</span><br><span class="line"></span><br><span class="line">input_width = 224</span><br><span class="line">input_height = 224</span><br><span class="line">rgb_img = (frame[:,:,[2, 1, 0]] \* 1.0 / 255).astype()</span><br><span class="line">lab_img = cv.cvtColor(rgb_img, cv.COLOR_RGB2Lab)</span><br><span class="line">l_channel = lab_img[:,:,0]</span><br><span class="line">l_channel_resize = cv.resize(l_channel, (input_width, input_height))</span><br><span class="line"></span><br><span class="line"># Predicting ab channel using caffe pretrained model</span><br><span class="line"></span><br><span class="line">Caffe_net.setInput(cv.dnn.blobFromImage(l_channel_resize))</span><br><span class="line">ab_channel = Caffe_net.forward()[0,:,:,:].transpose((1,2,0))</span><br><span class="line">(original_height,original_width) = rgb_img.shape[:2]</span><br><span class="line">ab_channel_us = cv.resize(ab_channel, (original_width, original_height))</span><br></pre>
+                    </td>
+                  </tr>
+                </table>
+              </figure>
+
+              <h2 id="Comparing-with-DeOldify-Image-Colorizer">
+                <a
+                  href="#Comparing-with-DeOldify-Image-Colorizer"
+                  class="headerlink"
+                  title="Comparing with DeOldify Image Colorizer"
+                ></a
+                >Comparing with DeOldify Image Colorizer
+              </h2>
+              <p>
+                Lastly, we will try to input the result through DeOldify,
+                checking for percentage similarity
+              </p>
+              <figure class="highlight plaintext">
+                <table>
+                  <tr>
+                    <td class="gutter">
+                      <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre>
+                    </td>
+                    <td class="code">
+                      <pre><span class="line"></span><br><span class="line"># Render the same image through DeOldify</span><br><span class="line"></span><br><span class="line">render_factor=35</span><br><span class="line">source_url= None</span><br><span class="line">source_path = &#x27;project/images/black-white-test-1.png&#x27;</span><br><span class="line">result_path = None</span><br><span class="line"></span><br><span class="line">if source_url is not None:</span><br><span class="line">result_path = colorizer.plot_transformed_image_from_url(url=source_url, path=source_path, render_factor=render_factor, compare=True)</span><br><span class="line">else:</span><br><span class="line">result_path = colorizer.plot_transformed_image(path=source_path, render_factor=render_factor, compare=True)</span><br><span class="line"></span><br><span class="line"># Output the similarity of the two images rendered</span><br><span class="line"></span><br><span class="line">cv.imwrite(&quot;./result2.png&quot;, (bgr_output\*255).astype(np.uint8))</span><br><span class="line">similarity = cv.norm(&quot;project/images/result/result2&quot;, &quot;project/images/result/result1&quot;, CV_L2)</span><br><span class="line">return similarity</span><br></pre>
+                    </td>
+                  </tr>
+                </table>
+              </figure>
+
+              <h2 id="Results">
+                <a href="#Results" class="headerlink" title="Results"></a
+                >Results
+              </h2>
+              <p>Some results will be show below</p>
+              <p>
+                Note that if the images doesn’t load, you can find it under
+                slides
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://docs.google.com/presentation/d/10MAZBHEWHy7zCkcBHXejHmr6z0C34r8oTS8syS62AEw/edit?usp=sharing"
+                  >here</a
+                >.
+              </p>
+              <img src="../images/fence-bw.jpeg" alt="" style="" />
+              <img src="../images/fence-resaturated.jpeg" alt="" style="" />
+              <img
+                src="../images/professor-bw.jpg"
+                alt=""
+                style="width: 30%; height: 30%"
+              />
+              <img
+                src="../images/professor-resaturated.jpg"
+                alt=""
+                style="width: 30%; height: 30%"
+              />
+              <img src="../images/mrinal-bw.jpeg" alt="" style="" />
+              <img src="../images/mrinal-saturaed.jpeg" alt="" style="" />
+
+              <h2 id="Acknowledgement-and-Limitations">
+                <a
+                  href="#Acknowledgement-and-Limitations"
+                  class="headerlink"
+                  title="Acknowledgement and Limitations"
+                ></a
+                >Acknowledgement and Limitations
+              </h2>
+              <p>
+                Currently the project (specifically the first program that uses
+                the cafee module) is relatively ineffcient, as it takes around
+                half a minute to up to two minutes on relatively small images,
+                especially ones with higher contrasts.
+              </p>
+              <p>
+                Further, the program performs better with landscapes compare to
+                human portraits, one potential reasoning would be that the
+                training module didn’t get to see the diversity of human colors,
+                as seen in set 2 and 3, the picture of professor Atkeson was
+                being rendered with more accuracy compare to Mrinal.
+              </p>
+              <p>
+                Source referenced can be found in the slides
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://docs.google.com/presentation/d/10MAZBHEWHy7zCkcBHXejHmr6z0C34r8oTS8syS62AEw/edit?usp=sharing"
+                  >here</a
+                >.
+              </p>
+              <h2 id="Presentation">
+                <a
+                  href="#Presentation"
+                  class="headerlink"
+                  title="Presentation"
+                ></a
+                >Presentation
+              </h2>
+              <p>
+                Presentaton can be found
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://docs.google.com/presentation/d/10MAZBHEWHy7zCkcBHXejHmr6z0C34r8oTS8syS62AEw/edit?usp=sharing"
+                  >here</a
+                >
+              </p>
+              <h2 id="Thanks-for-reading">
+                <a
+                  href="#Thanks-for-reading"
+                  class="headerlink"
+                  title="Thanks for reading!"
+                ></a
+                >Thanks for reading!
+              </h2>
+            </div>
+
+            <footer class="post-footer">
+              <div class="post-eof"></div>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+          &copy;
+          <span itemprop="copyrightYear">2022</span>
+          <span class="with-love">
+            <i class="fa fa-heart"></i>
+          </span>
+          <span class="author" itemprop="copyrightHolder">Yize Shen</span>
+        </div>
+        <div class="powered-by">
+          Powered by
+          <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> &
+          <a
+            href="https://theme-next.js.org/muse/"
+            rel="noopener"
+            target="_blank"
+            >NexT.Muse</a
+          >
+        </div>
+      </div>
     </footer>
-  </article>
-</div>
 
-
-
-
-
-</div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-
-
-<div class="copyright">
-  &copy; 
-  <span itemprop="copyrightYear">2022</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Yize Shen</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
-  </div>
-
-    </div>
-  </footer>
-
-  
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/humanoid-final-project/js/comments.js"></script><script src="/humanoid-final-project/js/utils.js"></script><script src="/humanoid-final-project/js/motion.js"></script><script src="/humanoid-final-project/js/schemes/muse.js"></script><script src="/humanoid-final-project/js/next-boot.js"></script>
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"
+      integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/humanoid-final-project/js/comments.js"></script>
+    <script src="/humanoid-final-project/js/utils.js"></script>
+    <script src="/humanoid-final-project/js/motion.js"></script>
+    <script src="/humanoid-final-project/js/schemes/muse.js"></script>
+    <script src="/humanoid-final-project/js/next-boot.js"></script>
+  </body>
 </html>
